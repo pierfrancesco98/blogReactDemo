@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
-import AdbIcon from "@mui/icons-material/Adb";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -25,6 +24,7 @@ const Navbar = ({user}) => {
   };
   const handleSignOut = () => {
     signOut(auth).then(() => {
+      window.location.href = '/';
     }).catch((error) => {
     });
   };
